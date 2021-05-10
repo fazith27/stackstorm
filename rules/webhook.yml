@@ -1,0 +1,23 @@
+---
+name: testing_webhook
+pack: mypack
+description: "Webhook API"
+enabled: true
+
+trigger:
+  type: "core.st2.webhook"
+  parameters:
+    url: "mypack"
+
+criteria:
+  trigger.body.action:
+    type: "equals"
+    pattern: "remove"
+  trigger.body.id:
+    type: "regex"
+    pattern: "^[0-9]{6}$"
+
+action:
+  parameters:
+    payload: "{{trigger.body}}"
+  ref: mypack.webhook_action

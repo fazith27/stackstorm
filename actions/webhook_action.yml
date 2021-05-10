@@ -1,0 +1,24 @@
+---
+name: webhook_action
+pack: mypack
+runner_type: "python-script"
+description: Execute python script
+enabled: true
+entry_point: webhook_action.py
+parameters:
+  payload:
+    type: "object"
+    description: "Payload"
+    required: true
+  name:
+    type: "string"
+    description: "Name to update"
+    default: "my-super-cool-name"
+  type:
+    type: "string"
+    description: "Type to Update"
+    default: "type-type-type"
+  base:
+    type: "string"
+    description: "I am the base"
+    default: "my-damn-cool-base"

@@ -1,0 +1,9 @@
+---
+ref: mypack
+name: mypack
+description: My Packs for Testing
+keywords:
+    - mypack
+version: 0.0.1
+author: MySelf
+email: mypack@gmail.com
