@@ -10,3 +10,7 @@ class MyWebhookAction(Action):
         # payload["type"] = params["type"]
         # payload["base"] = params["base"]
         print(payload)
+        print(type(payload))
+        print(params["name"])
+        print(params["type"])
+        print(params["base"])
